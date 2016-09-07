@@ -1,0 +1,88 @@
+
+// SECCION HOME
+mixin slider-uno(titulo,enlace,contenido)
+	li.clearfix
+		span.lead=titulo
+		a(href='#{enlace}')=contenido
+
+mixin all-slider-uno
+	+slider-uno('ROSARIO ROSALES','#clients','CLICK')
+	+slider-uno('ROSARIO ROSALES','#clients','CLICK')
+	+slider-uno('ROSARIO ROSALES','#clients','CLICK')
+	+slider-uno('ROSARIO ROSALES','#clients','CLICK')
+
+mixin flecha(icono)
+	span.fa.fa-2x(class='#{icono}')
+	span.fa.fa-2x(class='#{icono}')
+	span.fa.fa-2x(class='#{icono}')
+	span.fa.fa-2x(class='#{icono}')
+	span.fa.fa-2x(class='#{icono}')
+
+// SECCION NOSOTROS
+mixin certificacion(ruta,titulo,contenido)
+	.col-sm-6
+		.service-item.fadeInDown
+			.certificacion
+				img.img-responsive(src='#{ruta}')
+			h3=titulo
+			p.font-m=contenido
+
+mixin all-certificacion
+	+certificacion('img/nosotros/1.jpg','Certificación NTP 291.100-2:2009','Obtenida el año 2011')
+	+certificacion('img/nosotros/2.jpg','Certificación ISO/IEC 29110','Obtenida el año 2013')
+
+// SECCION PROCESOS
+mixin procesos(delay,icono,titulo,contenido)
+	.col-sm-2
+		.process-item(class='#{delay}')
+			i.fa.fa-3x(class='#{icono}')
+			h3=titulo
+			p.font-m=contenido
+
+mixin all-procesos
+	+procesos('#','fa-flask','Analize','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod')
+	+procesos('delay1','fa-gavel','Working','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod')
+	+procesos('delay2','fa-flag-checkered','Analize','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod')
+	+procesos('delay3','fa-stethoscope','Analize','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod')
+	+procesos('delay4','fa-truck','Analize','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod')
+	+procesos('delay5','fa-truck','Analize','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod')
+
+// SECCION SERVICIOS
+mixin servicios(delay,icono,titulo,contenido)
+	.col-md-6
+		.about-item(class='#{delay}')
+			.circle.pull-left
+				i.fa(class='#{icono}')
+			h4=titulo
+			p.font-m=contenido
+
+mixin all-servicios
+	+servicios('#','fa-clock-o','On time projects','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.')
+	+servicios('delay2','fa-rocket','Fully support','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.')            
+	+servicios('delay3','fa-thumbs-up','Professional experience','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.')            
+	+servicios('delay4','fa-comments','Communicative team','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.')
+
+// SECCION EQUIPO
+mixin equipo(nombre,descripcion,cargo,foto)
+	li.col-md-3
+		a.team-member(href='#', data-title='#{nombre}', data-description='#{descripcion}', data-twitter='', data-facebook='')
+			img.img-responsive(src='#{foto}', alt='')
+			span.name #{nombre}
+			span.title=cargo
+
+mixin all-equipo
+	+equipo('Karina Zevallos','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, tempore rem illo, quaerat suscipit aspernatur dolore sunt enim dolorem, molestias eum recusandae laboriosam reprehenderit! Sed repellendus, expedita illo error. Non!','Administración','img/Team/user_placeholder.png')
+	+equipo('Karina Zevallos','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, tempore rem illo, quaerat suscipit aspernatur dolore sunt enim dolorem, molestias eum recusandae laboriosam reprehenderit! Sed repellendus, expedita illo error. Non!','Administración','img/Team/user_placeholder.png')
+	+equipo('Karina Zevallos','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, tempore rem illo, quaerat suscipit aspernatur dolore sunt enim dolorem, molestias eum recusandae laboriosam reprehenderit! Sed repellendus, expedita illo error. Non!','Administración','img/Team/user_placeholder.png')
+	+equipo('Karina Zevallos','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, tempore rem illo, quaerat suscipit aspernatur dolore sunt enim dolorem, molestias eum recusandae laboriosam reprehenderit! Sed repellendus, expedita illo error. Non!','Administración','img/Team/user_placeholder.png')
+
+mixin testimonio(contenido,empresa)
+	blockquote
+		p=contenido
+		.divider
+			span=empresa
+
+mixin all-testimonios
+	+testimonio('Any man who can drive safely while kissing a pretty girl is simply not giving the kiss the attention it deserves.','Albert Einstein')
+	+testimonio('Any man who can drive safely while kissing a pretty girl is simply not giving the kiss the attention it deserves.','Albert 456')
+	+testimonio('Any man who can drive safely while kissing a pretty girl is simply not giving the kiss the attention it deserves.','Albert 123')
